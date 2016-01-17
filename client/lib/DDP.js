@@ -7,10 +7,11 @@ https://www.npmjs.com/package/ddp
 import DDP from 'ddp.js'
 
 var location = window.location.href.replace(/^https?\:\/\//i, "");
-location = 'ws://' + location + 'websocket'
+location = 'ws://' + location + 'websocket';
+
 var options = {
-    endpoint: location,
-    SocketConstructor: WebSocket
+  endpoint: location,
+  SocketConstructor: WebSocket
 };
 
 // Declare a global DDP variable we can use in the app.

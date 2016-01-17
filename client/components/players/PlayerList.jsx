@@ -1,7 +1,6 @@
 import React from 'react';
 
 class PlayerList extends React.Component {
-
   render() {
     if (!this.props.players) {
       return (
@@ -11,11 +10,6 @@ class PlayerList extends React.Component {
         </ul>
       );
     }
-
-    {/*
-      props.players is an object with each key as the _id.
-      Create an array for use in the html, and sort the keys by score.
-    */}
 
     let players = Object.keys(this.props.players).sort( (a,b) => {
       return this.props.players[b].score - this.props.players[a].score;

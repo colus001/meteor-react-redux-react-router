@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 
-Meteor.startup(function() {
+Meteor.startup(() => {
   window.addEventListener('DOMContentLoaded', () => {
     let root = document.createElement('root');
     document.body.appendChild(root);
@@ -14,8 +14,7 @@ Meteor.startup(function() {
           <DevTools/>
         </div>
       </Provider>
-      ,
-      root
+      , root
     );
   });
 });
