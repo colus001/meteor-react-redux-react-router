@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class App extends React.Component {
 
@@ -11,10 +12,12 @@ class App extends React.Component {
   }
 
   render() {
-
     return (
       <div className="outer">
         <div className="logo"></div>
+        <Link to="/">Home</Link>
+        {' '}
+        <Link to="/hello">Hello</Link>
         <h1 className="title">Leaderboard</h1>
         <ResetPlayers/>
         {this.resetPrompt()}
@@ -24,6 +27,7 @@ class App extends React.Component {
             selectedId = {this.props.selectedPlayer._id} />
         </div>
         <SelectPlayer { ...this.props } />
+        {this.props.children}
       </div>
     );
   }
