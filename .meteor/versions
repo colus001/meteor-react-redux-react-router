@@ -7,6 +7,7 @@ binary-heap@1.0.5-modules.3
 blaze@2.1.4-modules.3
 blaze-tools@1.0.5-modules.3
 boilerplate-generator@1.0.5-modules.3
+caching-compiler@1.0.1-modules.3
 callback-hook@1.0.5-modules.3
 check@1.1.1-modules.3
 ddp@1.2.2
@@ -19,6 +20,7 @@ ecmascript@0.3.1-modules.3
 ecmascript-runtime@0.2.7-modules.3
 ejson@1.0.8-modules.3
 es5-shim@4.3.2-modules.3
+fourseven:scss@3.4.1
 geojson-utils@1.0.5-modules.3
 hot-code-push@1.0.1-modules.3
 html-tools@1.0.6-modules.3

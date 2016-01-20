@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import { syncHistory, routeReducer } from 'redux-simple-router'
 
 Meteor.startup(() => {
@@ -13,8 +13,9 @@ Meteor.startup(() => {
       <Provider store={Store}>
         <div>
           <Router history={browserHistory}>
-            <Route path="/" component={AppContainer}>
-              <Route path="hello" component={About}/>
+            <Route path="/" component={Navbar}>
+              <IndexRoute component={About} />
+              <Route path="hello" component={AppContainer} />
             </Route>
           </Router>
         </div>

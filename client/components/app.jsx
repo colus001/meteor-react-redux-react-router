@@ -15,9 +15,6 @@ class App extends React.Component {
     return (
       <div className="outer">
         <div className="logo"></div>
-        <Link to="/">Home</Link>
-        {' '}
-        <Link to="/hello">Hello</Link>
         <h1 className="title">Leaderboard</h1>
         <ResetPlayers/>
         {this.resetPrompt()}
