@@ -1,7 +1,6 @@
 import React from 'react';
 
-class ResetPlayers extends React.Component {
-
+export default class ResetPlayers extends React.Component {
   constructor() {
     super()
     this.handleClick = this.handleClick.bind(this);
@@ -21,5 +20,3 @@ class ResetPlayers extends React.Component {
     );
   }
 };
-
-this.ResetPlayers = ResetPlayers;

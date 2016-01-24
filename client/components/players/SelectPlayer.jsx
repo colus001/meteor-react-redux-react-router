@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class SelectPlayer extends React.Component {
-
+export default class SelectPlayer extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -51,5 +50,3 @@ class SelectPlayer extends React.Component {
 SelectPlayer.propTypes = {
   selectedPlayer: React.PropTypes.object.isRequired
 }
-
-this.SelectPlayer = SelectPlayer

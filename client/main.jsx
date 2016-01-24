@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
-import { syncHistory, routeReducer } from 'redux-simple-router'
+import { syncHistory, routeReducer } from 'redux-simple-router';
+
+import Navbar from './components/common/Navbar.jsx';
+import About from './components/About.jsx';
+import AppContainer from './components/AppContainer.jsx';
 
 Meteor.startup(() => {
   window.addEventListener('DOMContentLoaded', () => {
@@ -18,20 +22,10 @@ Meteor.startup(() => {
               <Route path="hello" component={AppContainer} />
             </Route>
           </Router>
+          <DevTools/>
         </div>
-      </Provider>
-      , root
+      </Provider>,
+      root
     );
-
-
-    // ReactDOM.render(
-    //   <Provider store={Store}>
-    //     <div>
-    //       <AppContainer />
-    //       <DevTools/>
-    //     </div>
-    //   </Provider>
-    //   , root
-    // );
   });
 });

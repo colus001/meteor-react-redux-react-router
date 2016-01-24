@@ -1,6 +1,8 @@
 import React from 'react';
 
-class PlayerList extends React.Component {
+import PlayerItem from './PlayerItem.jsx';
+
+export default class PlayerList extends React.Component {
   render() {
     if (!this.props.players) {
       return (
@@ -40,5 +42,3 @@ PlayerList.propTypes = {
   players: React.PropTypes.object,
   selectedId: React.PropTypes.string
 }
-
-this.PlayerList = PlayerList

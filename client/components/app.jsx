@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class App extends React.Component {
+import PlayerList from './players/PlayerList.jsx';
+import ResetPlayers from './players/ResetPlayers.jsx';
+import SelectPlayer from './players/SelectPlayer.jsx';
 
+export default class App extends React.Component {
   resetPrompt() {
     if (_.isEmpty(this.props.players)) {
       return (
@@ -36,5 +39,3 @@ App.propTypes = {
   selectedName: React.PropTypes.string,
   errorMessage: React.PropTypes.string
 }
-
-this.App = App;

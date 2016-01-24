@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import App from './App.jsx';
+
 class AppContainer extends React.Component {
   componentWillUnmount() {
   }
@@ -20,4 +22,4 @@ function mapStateToProps(state) {
   };
 }
 
-this.AppContainer = connect(mapStateToProps)(AppContainer);
+export default connect(mapStateToProps)(AppContainer);

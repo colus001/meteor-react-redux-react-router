@@ -1,7 +1,6 @@
 import React from 'react';
 
-class PlayerItem extends React.Component {
-
+export default class PlayerItem extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -41,6 +40,3 @@ PlayerItem.propTypes = {
   isSelected: React.PropTypes.bool.isRequired,
   player: React.PropTypes.object.isRequired
 }
-
-// Make it global.
-this.PlayerItem = PlayerItem;
