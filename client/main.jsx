@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 import { syncHistory, routeReducer } from 'redux-simple-router';
 
-import Navbar from './components/common/Navbar.jsx';
-import About from './components/About.jsx';
-import AppContainer from './components/AppContainer.jsx';
+import routes from './routes.jsx';
 
 Meteor.startup(() => {
   window.addEventListener('DOMContentLoaded', () => {
@@ -16,12 +14,7 @@ Meteor.startup(() => {
     ReactDOM.render(
       <Provider store={Store}>
         <div>
-          <Router history={browserHistory}>
-            <Route path="/" component={Navbar}>
-              <IndexRoute component={About} />
-              <Route path="hello" component={AppContainer} />
-            </Route>
-          </Router>
+          <Router history={browserHistory}>{routes}</Router>
           <DevTools/>
         </div>
       </Provider>,
