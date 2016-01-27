@@ -28,7 +28,7 @@ function merge(objectA, objectB) {
 // these reducers *must* be pure to use time-travel dev-tools
 // never directly mutate the `state` param, use merge instead
 
-Reducers.userInterface = function userInterface(state, action) {
+Reducers.userInterface = (state = initialInterfaceState, action) => {
   state = state || initialInterfaceState;
 
   switch (action.type) {
@@ -64,7 +64,7 @@ Manages changes to the state.players collection.
 The state.players collection is stored as an object with _id keys, you can
 view the players collection structure in the Redux Dev Tools sidebar.
 */
-Reducers.players = function(state = {}, action) {
+Reducers.players = (state = {}, action) => {
   switch(action.type) {
     case 'PLAYER_ADDED':
       return {...state, [action.player._id]: action.player};

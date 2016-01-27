@@ -1,3 +1,5 @@
+import DDP from '../lib/DDP';
+
 var subId = DDP.sub('players');
 DDP.on('ready', function (message) {
   if (message.id === subId) {
@@ -15,7 +17,7 @@ Added Message :
     score: 40
 */
 DDP.on('added', function (message) {
-  if(message.collection !== 'players'){return}
+  if(message.collection !== 'players') return;
   var player = message.fields;
   player._id = message.id;
   Store.dispatch(Actions.logDDP(message));
@@ -32,7 +34,7 @@ Changed Message :
     score: 40
 */
 DDP.on('changed', function (message) {
-  if(message.collection !== 'players'){return}
+  if(message.collection !== 'players') return;
   var player = message.fields;
   player._id = message.id;
   Store.dispatch(Actions.logDDP(message));
