@@ -9,6 +9,7 @@ export default class Navbar extends React.Component {
         <nav className="navbar navbar-light bg-faded" style={{ marginBottom: '1rem' }}>
           <div className="nav navbar-nav">
             <Link className="nav-item nav-link" to="/">Home</Link>
+            <Link className="nav-item nav-link" to="/about">About</Link>
             <Link className="nav-item nav-link" to="/hello">Hello</Link>
           </div>
         </nav>
