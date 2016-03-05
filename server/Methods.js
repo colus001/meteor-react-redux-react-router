@@ -35,15 +35,19 @@ Meteor.methods({
 });
 
 var resetPlayers = function(){
-  Players.remove({});
   console.log( 'Reseting Players... ');
+
+  Players.remove({});
+
   var names = [
     'Ada Lovelace',
     'Grace Hopper',
     'Marie Curie',
     'Carl Friedrich Gauss',
     'Nikola Tesla',
-    'Claude Shannon'];
+    'Claude Shannon'
+  ];
+
   names.forEach(function (name) {
     Players.insert({
       name: name,

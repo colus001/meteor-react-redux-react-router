@@ -3,6 +3,8 @@
 // unneeded boilerplate  but it's **really** nice to have a file
 // with *all* possible ways to mutate the state of the app.
 
+import { Store } from '../store/store.jsx';
+
 var Actions = {};
 
 // Player data has changed.
@@ -16,6 +18,7 @@ Actions.playerAdded = function playersChanged(player) {
 
 Actions.updateScore = function updateScore(player) {
   Meteor.call('players.update-score', player._id, function(err, res){
+    console.log();
     if(err){
       // The server error returns the true score.
       let score = err.details.score;

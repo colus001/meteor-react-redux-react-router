@@ -4,6 +4,7 @@ import Actions from '../actions/Actions.jsx';
 import { Store } from '../store/store.jsx';
 
 var subId = DDP.sub('players');
+
 DDP.on('ready', function (message) {
   if (message.id === subId) {
       console.log('players ready');
@@ -21,6 +22,7 @@ Added Message :
 */
 DDP.on('added', function (message) {
   if(message.collection !== 'players') return;
+
   var player = message.fields;
   player._id = message.id;
   Store.dispatch(Actions.logDDP(message));
@@ -38,6 +40,7 @@ Changed Message :
 */
 DDP.on('changed', function (message) {
   if(message.collection !== 'players') return;
+
   var player = message.fields;
   player._id = message.id;
   Store.dispatch(Actions.logDDP(message));
@@ -51,7 +54,8 @@ Removed Message :
   msg: "removed"
 */
 DDP.on('removed', function (message) {
-  if(message.collection !== 'players'){return}
+  if(message.collection !== 'players') return;
+
   Store.dispatch(Actions.logDDP(message));
   Store.dispatch(Actions.playerDeleted(message.id));
 });

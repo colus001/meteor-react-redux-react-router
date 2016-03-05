@@ -9,7 +9,8 @@ import { Store } from '../store/store.jsx';
 
 import Actions from '../actions/Actions.jsx';
 
-var location = window.location.href.replace(/^https?\:\/\//i, "");
+// var location = window.location.href.replace(/^https?\:\/\//i, "");
+var location = window.location.host + '/';
 location = 'ws://' + location + 'websocket';
 
 var options = {
@@ -25,7 +26,7 @@ var options = {
 const DDP = new DDPjs(options);
 
 DDP.on('connected', function () {
-  Store.dispatch(Actions.logDDP({message:'connected'}));
+  Store.dispatch(Actions.logDDP({ message:'connected' }));
 });
 
 export default DDP;

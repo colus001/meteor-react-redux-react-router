@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+import { Store } from '../../store/store.jsx';
+import Actions from '../../actions/Actions.jsx';
+
 export default class SelectPlayer extends React.Component {
   constructor(props) {
     super(props);

@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { Store } from '../../store/store.jsx';
+import Actions from '../../actions/Actions.jsx';
+
 export default class ResetPlayers extends React.Component {
   constructor() {
     super()
