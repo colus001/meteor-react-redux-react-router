@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { Router, browserHistory } from 'react-router';
-import { syncHistory, routeReducer } from 'redux-simple-router';
+import { syncHistory, routeReducer } from 'react-router-redux';
 
 import routes from './routes.jsx';
+import { Store } from './store/store.jsx';
 
 Meteor.startup(() => {
   window.addEventListener('DOMContentLoaded', () => {

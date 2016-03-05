@@ -1,5 +1,6 @@
+import Actions from '../actions/Actions.jsx';
+
 let { incrementScore, selectPlayer, playersChanged } = Actions;
-Reducers = {};
 
 let initialInterfaceState = {
   selectedPlayer: {},
@@ -7,6 +8,7 @@ let initialInterfaceState = {
   ddpMessages: []
 }
 
+var Reducers = {};
 /*
   merge
   Helper to *copy* old state and merge new data with it, currently this
@@ -103,3 +105,5 @@ Reducers.players = (state = {}, action) => {
       return state;
   }
 }
+
+export default Reducers;

@@ -51,6 +51,7 @@ var resetPlayers = function(){
     });
   });
 }
+
 // Run fixtures on server start.
 Meteor.startup(function () {
   resetPlayers();

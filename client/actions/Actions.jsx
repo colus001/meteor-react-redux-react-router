@@ -3,7 +3,8 @@
 // unneeded boilerplate  but it's **really** nice to have a file
 // with *all* possible ways to mutate the state of the app.
 
-Actions = {};
+var Actions = {};
+
 // Player data has changed.
 Actions.playerChanged = function playersChanged(player) {
   return {type: 'PLAYER_CHANGED', player};
@@ -63,3 +64,5 @@ Actions.logDDP = function logDDP(message) {
     message: message
   };
 };
+
+export default Actions;

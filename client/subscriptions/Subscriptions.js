@@ -1,5 +1,8 @@
 import DDP from '../lib/DDP';
 
+import Actions from '../actions/Actions.jsx';
+import { Store } from '../store/store.jsx';
+
 var subId = DDP.sub('players');
 DDP.on('ready', function (message) {
   if (message.id === subId) {

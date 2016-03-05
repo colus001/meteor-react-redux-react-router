@@ -4,7 +4,10 @@ https://www.npmjs.com/package/ddp.js
 There is another package called 'ddp' which is similar :
 https://www.npmjs.com/package/ddp
 */
-import DDPjs from 'ddp.js'
+import DDPjs from 'ddp.js';
+import { Store } from '../store/store.jsx';
+
+import Actions from '../actions/Actions.jsx';
 
 var location = window.location.href.replace(/^https?\:\/\//i, "");
 location = 'ws://' + location + 'websocket';
